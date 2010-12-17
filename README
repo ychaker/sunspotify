@@ -17,6 +17,7 @@ add the following lines to your Gemfile
 	gem 'sunspot_rails', '>= 1.2.rc3'
 	gem 'haml'
 	gem 'will_paginate', '~> 3.0.pre2'
+	gem 'nokogiri'
 	
 install the plugin
 
