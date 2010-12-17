@@ -1,0 +1,37 @@
+Sunspotify
+==========
+
+Introduction goes here.
+
+
+Installation
+=============
+
+add the following lines to your Gemfile
+
+	# sunspotify dependencies
+	gem 'sunspot_rails', '>= 1.2.rc3'
+	gem 'haml'
+	gem 'will_paginate', '~> 3.0.pre2'
+	
+from your command line run the following:
+
+	bundle install
+	rails g sunspot_rails:install
+	rake db:migrate:sunspotify 
+	
+Make sure you have a current_user method in your application_controller.rb file and that it is under 'protected' and not 'private'
+
+in app/views/layouts/application.html.erb:
+
+add in the head section:
+
+	<%= yield :stylesheets %>
+	<%= yield :javascripts %>
+
+and in the content section where you want the content to go:
+
+	<%= content_for?(:content) ? yield(:content) : yield %>
+
+
+Copyright (c) 2010 Youssef Chaker, released under the MIT license

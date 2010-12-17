@@ -1,0 +1,19 @@
+<div id='status'>
+	<%= render :partial => 'status_pod', :locals => { 
+		:solr_running => @solr_running,
+		:searchable => @searchable,
+		:unprepared => @unprepared, 
+		:prepared => @prepared, 
+		:indexed => @indexed 
+		} 
+	%>
+</div>
+
+<div id='items'>
+	<%= render :partial => 'items', :locals => { 
+		:models => @models,
+		:added => @added,
+		:indexed => @indexed 
+		} 
+	%>
+</div>

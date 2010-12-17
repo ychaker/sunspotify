@@ -1,0 +1,26 @@
+<% content_for :stylesheets do %>
+	<%= stylesheet_link_tag "sunspot_admin/sunspot_admin" %>
+<% end %>
+<% content_for :javascripts do %>
+	<%= javascript_include_tag "sunspot_admin/sunspot_admin" %>
+<% end %>
+
+<% content_for :content do %>
+	<section id="sunspot-admin">
+		<header>
+			<h1><%= link_to "Sunspot Server Admin", :controller => "sunspot_admin", :action => "index" %></h1>
+			<div id='ram'><%= image_tag "sunspot_admin/16kb-ram.png", :height => 30, :width => 90 %></div>
+		</header>
+
+		<section id="indexable-content">
+			<%= yield %>
+		</section>
+
+		<footer>
+			<div id="vent"></div>
+			<div id="signature">made in USA</div>
+		</footer>
+	</section>
+<% end %>
+
+<%= render :file => 'layouts/application' %>
