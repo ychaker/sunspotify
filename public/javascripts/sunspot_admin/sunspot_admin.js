@@ -2,6 +2,8 @@ function rotateFan() {
 	var count = 0;
 	$('still').toggle();
 	$('spinning').toggle();
+	playAudioFile('fan-start-audio');
+	playAudioFile('fan-middle-audio');
 	function rotate() {
 	  var elem2 = $('spinning');
 	  elem2.style.MozTransform = 'scale(1) rotate('+count+'deg)';
@@ -11,4 +13,12 @@ function rotateFan() {
 	  window.setTimeout(rotate, 25);
 	}
 	window.setTimeout(rotate, 25);
+}
+
+function playAudioFile(fileId) {
+	$(fileId).play();
+}
+
+function stopAudioFile(fileId) {
+	$(fileId).pause();
 }
