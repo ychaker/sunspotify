@@ -52,11 +52,11 @@ By creating partials in your app/views directory you can override how results ar
 
 The default template can be overridden by creating the following file:
 
-	app/views/search/_default_display_results.html.haml
+	app/views/search/_default_display_result.html.haml
 
 It is suggested to create a template for each model:
 
-	app/views/search/_display_results_<model_name_lowercase_and_singular>.html.haml
+	app/views/search/_display_result_<model_name_lowercase_and_singular>.html.haml
 
 
 == Usage
